@@ -12,7 +12,7 @@ source:
   sha256: 5897c4154386a7f1328d00814c137b405ddc8f8a9cc4a7cc666d9197d7d10367
 
 build:
-  number: 1
+  number: 2
 
 outputs:
   - package:
@@ -42,7 +42,7 @@ outputs:
         - python >=${{ python_min }}
         - ${{ compiler("cxx") }}
         - typing-extensions >=4.12,<5
-        - pyarrow >=20,<21
+        - pyarrow >=20
         - pandas >=2.0,<3
         - numpy >=1.25,<3
         - scipy >=1.11,<2
