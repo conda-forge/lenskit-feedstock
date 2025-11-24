@@ -12,7 +12,7 @@ source:
   sha256: b8ed1d941ce592d159e3f5f8ba68eddadb7b4b13db0834704b3fe7f69c6ceeaa
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - package:
@@ -90,19 +90,6 @@ outputs:
             - pytest-doctestplus >=1.2.1,<2
             - hypothesis >=6.16
             - pyyaml ~=6.0
-
-  - package:
-      name: lenskit-funksvd
-    build:
-      noarch: python
-      script:
-        - "true"
-    requirements:
-      host:
-        - python ${{ python_min }}.*
-      run:
-        - python >=${{ python_min }}
-        - lenskit >=2025.3
 
   - package:
       name: lenskit-sklearn
