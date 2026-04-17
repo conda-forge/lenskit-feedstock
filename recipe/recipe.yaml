@@ -1,6 +1,6 @@
 context:
   name: lenskit
-  version: "2025.6.3"
+  version: "2025.8.0"
   python_min: '3.11'
 
 recipe:
@@ -9,7 +9,7 @@ recipe:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 5416dad68ce6f2a7004b3fbce87b4022914c0d03be710d7e0476905e58449c7e
+  sha256: 4a21a7232fc9ff483345f1eafa8ea0a056fc56d1af91e84fc6ee5aadfd4886da
 
 build:
   number: 0
@@ -181,40 +181,6 @@ outputs:
           pip_check: false
       - script:
           - pytest -m "not slow" tests/hpf
-        files:
-          source:
-            - tests/
-            - conftest.py
-            - data/
-            - pyproject.toml
-        requirements:
-          run:
-            - pytest >=8.2,<9
-            - pytest-benchmark =4
-            - pytest-doctestplus >=1.2.1,<2
-            - hypothesis >=6.16
-            - pyyaml ~=6.0
-
-  - package:
-      name: lenskit-gnn
-    build:
-      noarch: python
-      script:
-        - "true"
-    requirements:
-      host:
-        - python ${{ python_min }}.*
-      run:
-        - python >=${{ python_min }}
-        - ${{ pin_subpackage('lenskit') }}
-        - torch-geometric >=2.6,<3
-    tests:
-      - python:
-          imports:
-            - lenskit.graphs.lightgcn
-          pip_check: false
-      - script:
-          - pytest -m "not slow" tests/graphs
         files:
           source:
             - tests/
