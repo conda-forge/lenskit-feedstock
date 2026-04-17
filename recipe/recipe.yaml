@@ -196,40 +196,6 @@ outputs:
             - pyyaml ~=6.0
 
   - package:
-      name: lenskit-gnn
-    build:
-      noarch: python
-      script:
-        - "true"
-    requirements:
-      host:
-        - python ${{ python_min }}.*
-      run:
-        - python >=${{ python_min }}
-        - ${{ pin_subpackage('lenskit') }}
-        - torch-geometric >=2.6,<3
-    tests:
-      - python:
-          imports:
-            - lenskit.graphs.lightgcn
-          pip_check: false
-      - script:
-          - pytest -m "not slow" tests/graphs
-        files:
-          source:
-            - tests/
-            - conftest.py
-            - data/
-            - pyproject.toml
-        requirements:
-          run:
-            - pytest >=8.2,<9
-            - pytest-benchmark =4
-            - pytest-doctestplus >=1.2.1,<2
-            - hypothesis >=6.16
-            - pyyaml ~=6.0
-
-  - package:
       name: lenskit-tune
     build:
       noarch: python
