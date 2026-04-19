@@ -82,7 +82,6 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-lenskit-green.svg)](https://anaconda.org/conda-forge/lenskit) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/lenskit.svg)](https://anaconda.org/conda-forge/lenskit) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/lenskit.svg)](https://anaconda.org/conda-forge/lenskit) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/lenskit.svg)](https://anaconda.org/conda-forge/lenskit) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-lenskit--gnn-green.svg)](https://anaconda.org/conda-forge/lenskit-gnn) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/lenskit-gnn.svg)](https://anaconda.org/conda-forge/lenskit-gnn) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/lenskit-gnn.svg)](https://anaconda.org/conda-forge/lenskit-gnn) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/lenskit-gnn.svg)](https://anaconda.org/conda-forge/lenskit-gnn) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-lenskit--hpf-green.svg)](https://anaconda.org/conda-forge/lenskit-hpf) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/lenskit-hpf.svg)](https://anaconda.org/conda-forge/lenskit-hpf) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/lenskit-hpf.svg)](https://anaconda.org/conda-forge/lenskit-hpf) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/lenskit-hpf.svg)](https://anaconda.org/conda-forge/lenskit-hpf) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-lenskit--implicit-green.svg)](https://anaconda.org/conda-forge/lenskit-implicit) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/lenskit-implicit.svg)](https://anaconda.org/conda-forge/lenskit-implicit) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/lenskit-implicit.svg)](https://anaconda.org/conda-forge/lenskit-implicit) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/lenskit-implicit.svg)](https://anaconda.org/conda-forge/lenskit-implicit) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-lenskit--sklearn-green.svg)](https://anaconda.org/conda-forge/lenskit-sklearn) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/lenskit-sklearn.svg)](https://anaconda.org/conda-forge/lenskit-sklearn) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/lenskit-sklearn.svg)](https://anaconda.org/conda-forge/lenskit-sklearn) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/lenskit-sklearn.svg)](https://anaconda.org/conda-forge/lenskit-sklearn) |
@@ -98,16 +97,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `lenskit, lenskit-gnn, lenskit-hpf, lenskit-implicit, lenskit-sklearn, lenskit-tune` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `lenskit, lenskit-hpf, lenskit-implicit, lenskit-sklearn, lenskit-tune` can be installed with `conda`:
 
 ```
-conda install lenskit lenskit-gnn lenskit-hpf lenskit-implicit lenskit-sklearn lenskit-tune
+conda install lenskit lenskit-hpf lenskit-implicit lenskit-sklearn lenskit-tune
 ```
 
 or with `mamba`:
 
 ```
-mamba install lenskit lenskit-gnn lenskit-hpf lenskit-implicit lenskit-sklearn lenskit-tune
+mamba install lenskit lenskit-hpf lenskit-implicit lenskit-sklearn lenskit-tune
 ```
 
 It is possible to list all of the versions of `lenskit` available on your platform with `conda`:
