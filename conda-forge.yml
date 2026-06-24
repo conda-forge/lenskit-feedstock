@@ -2,8 +2,11 @@ conda_forge_output_validation: true
 conda_build_tool: rattler-build
 noarch_platforms: linux_64
 build_platform:
-  osx_arm64: osx_64
-  linux_aarch64: linux_64
+  osx_arm64: osx_arm64
+  linux_aarch64: linux_aarch64
+provider:
+  osx_arm64: default
+  linux_aarch64: default
 test: native
 github:
   branch_name: main
